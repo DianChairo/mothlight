@@ -1,0 +1,47 @@
+/* Mothlight's page frame: a dark room around the garden, the canvas
+   centred and scaled to fit while keeping its 16:9 shape. */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: #05060f;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #aab6dd;
+}
+
+.stage {
+  text-align: center;
+  padding: 18px 12px 10px;
+}
+
+canvas#game {
+  display: block;
+  width: min(97vw, 1280px);
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: #0a0e27;
+  border: 1px solid rgba(255, 215, 106, 0.25);
+  border-radius: 10px;
+  box-shadow: 0 0 60px rgba(255, 181, 46, 0.12), 0 18px 50px rgba(0, 0, 0, 0.6);
+  cursor: crosshair;
+}
+
+.hint {
+  margin: 10px 0 0;
+  font-size: 12.5px;
+  letter-spacing: 0.02em;
+  color: rgba(170, 182, 221, 0.6);
+}
